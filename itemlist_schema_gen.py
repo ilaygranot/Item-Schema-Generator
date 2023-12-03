@@ -1,5 +1,3 @@
-pip install -r requirements.txt
-
 from bs4 import BeautifulSoup
 import requests
 import json
