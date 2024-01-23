@@ -24,7 +24,8 @@ def generate_itemlist(url):
     soup = BeautifulSoup(r.content, 'html.parser')
 
     # Find the anchorViewer elements
-    anchors = soup.find_all('a', {'data-hook': 'anchorViewer'})
+    anchors = soup.find_all('a', href=lambda href: href and href.startswith('#viewer-'))
+
 
     if not anchors:
         st.error(f"No anchorViewer elements found in the page: {url}")
