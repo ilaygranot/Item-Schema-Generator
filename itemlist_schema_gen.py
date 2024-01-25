@@ -52,7 +52,7 @@ def generate_itemlist_jsonld(url, itemList):
     return f'<script type="application/ld+json">\n{jsonld}\n</script>'
 
 
-@st.cache_data
+@st.cache_resource
 def generate_schemas(urls):
     schema_data = []
 
